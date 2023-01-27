@@ -25,7 +25,7 @@ syn match kdlNumber '\d[[:digit:]]*[eE][\-+]\=\d\+' contained display
 syn match kdlNumber '[-+]\=\d[[:digit:]]*\.\d*[eE][\-+]\=\d\+' contained display
 syn match kdlNumber '\d[[:digit:]]*\.\d*[eE][\-+]\=\d\+' contained display
 
-syn region kdlString start='"' end='"' skip='\\"' display
+syn region kdlString start='"' end='"' skip='\\\\\|\\"' display
  
 syn region kdlChildren start="{" end="}" contains=kdlString,kdlNumber,kdlNode,kdlBool,kdlComment
 
